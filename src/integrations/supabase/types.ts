@@ -14,7 +14,101 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      enrollments: {
+        Row: {
+          amount_paid: number
+          course_level: string
+          enrolled_at: string
+          id: string
+          payment_status: string
+          stripe_payment_intent_id: string | null
+          user_id: string
+          zoom_link: string | null
+        }
+        Insert: {
+          amount_paid: number
+          course_level: string
+          enrolled_at?: string
+          id?: string
+          payment_status?: string
+          stripe_payment_intent_id?: string | null
+          user_id: string
+          zoom_link?: string | null
+        }
+        Update: {
+          amount_paid?: number
+          course_level?: string
+          enrolled_at?: string
+          id?: string
+          payment_status?: string
+          stripe_payment_intent_id?: string | null
+          user_id?: string
+          zoom_link?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "enrollments_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      inquiries: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
