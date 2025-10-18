@@ -13,7 +13,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { name: "Courses", href: "/courses" },
     { name: "Specializations", href: "/specializations" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Promotions", href: "/promotions" },
     { name: "Contact", href: "/contact" },
   ];
 
