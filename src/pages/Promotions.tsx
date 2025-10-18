@@ -15,6 +15,8 @@ const Promotions = () => {
       image: flyerBeginner,
       title: "Start Your Tech Journey",
       description: "Perfect for absolute beginners ready to learn programming fundamentals and build their first projects.",
+      downloadFile: flyerBeginner,
+      fileName: "TechBridge_Beginner_Flyer.jpg"
     },
     {
       level: "Intermediate",
@@ -22,6 +24,8 @@ const Promotions = () => {
       image: flyerIntermediate,
       title: "Advance Your Skills",
       description: "For developers ready to tackle advanced concepts, frameworks, and real-world applications.",
+      downloadFile: flyerIntermediate,
+      fileName: "TechBridge_Intermediate_Flyer.jpg"
     },
     {
       level: "Advanced",
@@ -29,13 +33,10 @@ const Promotions = () => {
       image: flyerAdvanced,
       title: "Become a Certified Pro",
       description: "Master advanced technologies, earn certification, and prepare for professional opportunities.",
+      downloadFile: flyerAdvanced,
+      fileName: "TechBridge_Advanced_Flyer.jpg"
     },
   ];
-
-  const handleDownload = (level: string) => {
-    // This would trigger actual PDF download in production
-    console.log(`Downloading ${level} flyer`);
-  };
 
   return (
     <div className="min-h-screen">
@@ -57,9 +58,11 @@ const Promotions = () => {
             <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
               Master in-demand software skills through live classes, real-world projects, and expert guidance.
             </p>
-            <Button size="lg" className="animate-scale-in">
-              <Download className="mr-2 h-5 w-5" />
-              Download Course Brochure
+            <Button size="lg" className="animate-scale-in" asChild>
+              <a href={heroImage} download="TechBridge_Course_Brochure.jpg">
+                <Download className="mr-2 h-5 w-5" />
+                Download Course Brochure
+              </a>
             </Button>
           </div>
         </div>
@@ -191,10 +194,12 @@ const Promotions = () => {
                   <Button
                     variant="outline"
                     className="w-full"
-                    onClick={() => handleDownload(flyer.level)}
+                    asChild
                   >
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Flyer (PDF)
+                    <a href={flyer.downloadFile} download={flyer.fileName}>
+                      <Download className="mr-2 h-4 w-4" />
+                      Download Flyer
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
