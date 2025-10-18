@@ -44,12 +44,17 @@ serve(async (req) => {
       apiVersion: "2025-08-27.basil",
     });
 
-    // Check if customer exists
-    const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+    // Try to check if customer exists, but handle permission errors gracefully
     let customerId;
-    
-    if (customers.data.length > 0) {
-      customerId = customers.data[0].id;
+    try {
+      const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+      if (customers.data.length > 0) {
+        customerId = customers.data[0].id;
+        console.log("Found existing customer:", customerId);
+      }
+    } catch (customerError: any) {
+      // If we don't have permission to list customers, that's okay - Stripe will handle it
+      console.log("Could not list customers (this is okay):", customerError.message);
     }
 
     // Create checkout session for one-time payment
