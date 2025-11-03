@@ -44,8 +44,12 @@ const Courses = () => {
     setProcessingLevel(level);
 
     try {
-      const { data, error } = await supabase.functions.invoke("create-enrollment-checkout", {
-        body: { courseLevel: level },
+      const { data, error } = await supabase.functions.invoke("create-checkout-session", {
+        body: { 
+          user_email: user.email,
+          user_name: user.user_metadata?.full_name || user.email,
+          level_id: level 
+        },
       });
 
       if (error) throw error;

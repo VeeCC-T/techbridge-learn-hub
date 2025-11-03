@@ -17,33 +17,45 @@ export type Database = {
       enrollments: {
         Row: {
           amount_paid: number
+          confirmation_email_sent: boolean | null
           course_level: string
           enrolled_at: string
           id: string
           payment_status: string
           stripe_payment_intent_id: string | null
+          stripe_session_id: string | null
           user_id: string
           zoom_link: string | null
+          zoom_reg_id: string | null
+          zoom_registered: boolean | null
         }
         Insert: {
           amount_paid: number
+          confirmation_email_sent?: boolean | null
           course_level: string
           enrolled_at?: string
           id?: string
           payment_status?: string
           stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
           user_id: string
           zoom_link?: string | null
+          zoom_reg_id?: string | null
+          zoom_registered?: boolean | null
         }
         Update: {
           amount_paid?: number
+          confirmation_email_sent?: boolean | null
           course_level?: string
           enrolled_at?: string
           id?: string
           payment_status?: string
           stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
           user_id?: string
           zoom_link?: string | null
+          zoom_reg_id?: string | null
+          zoom_registered?: boolean | null
         }
         Relationships: [
           {
@@ -84,6 +96,62 @@ export type Database = {
           status?: string
         }
         Relationships: []
+      }
+      payments_log: {
+        Row: {
+          amount: number | null
+          created_at: string | null
+          currency: string | null
+          enrollment_id: string | null
+          error_message: string | null
+          event_type: string
+          id: string
+          metadata: Json | null
+          status: string
+          stripe_event_id: string | null
+          stripe_payment_intent_id: string | null
+          stripe_session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          amount?: number | null
+          created_at?: string | null
+          currency?: string | null
+          enrollment_id?: string | null
+          error_message?: string | null
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          status: string
+          stripe_event_id?: string | null
+          stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          amount?: number | null
+          created_at?: string | null
+          currency?: string | null
+          enrollment_id?: string | null
+          error_message?: string | null
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          status?: string
+          stripe_event_id?: string | null
+          stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "payments_log_enrollment_id_fkey"
+            columns: ["enrollment_id"]
+            isOneToOne: false
+            referencedRelation: "enrollments"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       profiles: {
         Row: {

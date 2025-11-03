@@ -14,7 +14,7 @@ import Promotions from "./pages/Promotions";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import PaymentSuccess from "./pages/PaymentSuccess";
+import PaymentSuccess from "./pages/PaymentSuccessNew";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
