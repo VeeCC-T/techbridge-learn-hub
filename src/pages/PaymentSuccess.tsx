@@ -62,7 +62,7 @@ const PaymentSuccess = () => {
           </div>
           <CardTitle className="text-3xl">Payment Successful!</CardTitle>
           <p className="text-muted-foreground mt-2">
-            Your course access has been unlocked. Welcome to TechBridge!
+            Your course access has been unlocked. Welcome to Hub365!
           </p>
         </CardHeader>
         <CardContent className="space-y-6">

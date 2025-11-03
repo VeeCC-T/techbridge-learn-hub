@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <Link to="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
               <GraduationCap className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                TechBridge Academy
+                Hub365
               </span>
             </Link>
 
@@ -115,7 +115,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <GraduationCap className="h-6 w-6 text-primary" />
-                <span className="font-bold text-lg">TechBridge Academy</span>
+                <span className="font-bold text-lg">Hub365</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Building tech careers from zero to mastery through structured mentorship and recognized certifications.
@@ -194,7 +194,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
 
           <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} TechBridge Academy. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Hub365. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -25,8 +25,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification to admin
     const adminEmail = await resend.emails.send({
-      from: "TechBridge <onboarding@resend.dev>",
-      to: ["info@techbridge.com"],
+      from: "Hub365 <onboarding@resend.dev>",
+      to: ["info@hub365.com"],
       subject: `New Inquiry from ${name}`,
       html: `
         <h2>New Contact Inquiry</h2>
@@ -40,17 +40,17 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation to user
     const userEmail = await resend.emails.send({
-      from: "TechBridge <onboarding@resend.dev>",
+      from: "Hub365 <onboarding@resend.dev>",
       to: [email],
-      subject: "Thank you for contacting TechBridge!",
+      subject: "Thank you for contacting Hub365!",
       html: `
-        <h1>Thank you for contacting TechBridge!</h1>
+        <h1>Thank you for contacting Hub365!</h1>
         <p>Hi ${name},</p>
         <p>We have received your message and will get back to you shortly.</p>
         <p>Your message:</p>
         <p><em>${message}</em></p>
         <br>
-        <p>Best regards,<br>The TechBridge Team</p>
+        <p>Best regards,<br>The Hub365 Team</p>
       `,
     });
 

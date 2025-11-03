@@ -66,7 +66,7 @@ serve(async (req) => {
           price_data: {
             currency: "usd",
             product_data: {
-              name: `TechBridge ${courseLevel.charAt(0).toUpperCase() + courseLevel.slice(1)} Course`,
+              name: `Hub365 ${courseLevel.charAt(0).toUpperCase() + courseLevel.slice(1)} Course`,
               description: `12-week ${courseLevel} level software development course`,
             },
             unit_amount: levelInfo.amount * 100, // Convert to cents

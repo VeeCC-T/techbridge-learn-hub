@@ -117,7 +117,7 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Why Choose TechBridge Academy?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Why Choose Hub365?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We provide everything you need to succeed in your software engineering journey
             </p>
@@ -181,7 +181,7 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Start Your Journey?</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Join thousands of students who are building successful tech careers with TechBridge Academy
+            Join thousands of students who are building successful tech careers with Hub365
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/courses">

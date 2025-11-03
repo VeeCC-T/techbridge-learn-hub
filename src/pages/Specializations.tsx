@@ -188,8 +188,8 @@ const Specializations = () => {
             </div>
             <h2 className="text-3xl font-bold">Earn Industry-Recognized Certificates</h2>
             <p className="text-lg text-muted-foreground">
-              Upon successful completion of any specialization, you'll receive a certificate from TechBridge
-              Academy in partnership with recognized industry partners. These credentials are valued by employers
+              Upon successful completion of any specialization, you'll receive a certificate from Hub365
+              in partnership with recognized industry partners. These credentials are valued by employers
               and demonstrate your advanced expertise in your chosen specialization.
             </p>
             <div className="grid md:grid-cols-3 gap-6 pt-8">

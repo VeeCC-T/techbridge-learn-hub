@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
       toast({
         title: "Account Created!",
-        description: "Welcome to TechBridge! You can now enroll in courses.",
+        description: "Welcome to Hub365! You can now enroll in courses.",
       });
 
       return { error: null };

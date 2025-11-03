@@ -15,8 +15,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "support@techbridgeacademy.com",
-      link: "mailto:support@techbridgeacademy.com",
+      content: "info@hub365.com",
+      link: "mailto:info@hub365.com",
     },
     {
       icon: Phone,

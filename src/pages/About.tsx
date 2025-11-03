@@ -31,7 +31,7 @@ const About = () => {
       <section className="bg-gradient-subtle py-20">
         <div className="container mx-auto px-4 text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold animate-fade-in">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">TechBridge Academy</span>
+            About <span className="bg-gradient-primary bg-clip-text text-transparent">Hub365</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-up">
             We're on a mission to bridge the gap between aspiration and achievement in tech education
@@ -46,7 +46,7 @@ const About = () => {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Our Story</h2>
               <p className="text-muted-foreground leading-relaxed">
-                TechBridge Academy was founded with a simple yet powerful vision: to make world-class software
+                Hub365 was founded with a simple yet powerful vision: to make world-class software
                 engineering education accessible to everyone, everywhere. We recognized that traditional education
                 paths often leave aspiring developers without the practical skills and industry connections needed
                 to succeed in today's fast-paced tech world.
@@ -153,7 +153,7 @@ const About = () => {
               Amazon, and leading tech startups.
             </p>
             <p className="text-muted-foreground">
-              Every instructor at TechBridge Academy is committed to providing personalized attention and mentorship
+              Every instructor at Hub365 is committed to providing personalized attention and mentorship
               to ensure your success. They don't just teach—they mentor, guide, and support you throughout your
               entire learning journey.
             </p>

@@ -55,7 +55,7 @@ const Promotions = () => {
     {
       name: "Amara O.",
       location: "Lagos",
-      quote: "TechBridge gave me the clarity and confidence to pursue a tech career. The live sessions were game-changing."
+      quote: "Hub365 gave me the clarity and confidence to pursue a tech career. The live sessions were game-changing."
     },
     {
       name: "David K.",
@@ -65,7 +65,7 @@ const Promotions = () => {
     {
       name: "Sarah M.",
       location: "Accra",
-      quote: "From zero coding knowledge to landing my first developer role. TechBridge made it possible."
+      quote: "From zero coding knowledge to landing my first developer role. Hub365 made it possible."
     },
     {
       name: "James T.",
@@ -81,7 +81,7 @@ const Promotions = () => {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto text-center max-w-5xl relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-fade-in">
-            Launch Your Tech Career with TechBridge
+            Launch Your Tech Career with Hub365
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in">
             A 12-week immersive online program designed to help beginners, intermediates, and advanced learners master software engineering skills.
@@ -109,7 +109,7 @@ const Promotions = () => {
             Choose Your Learning Path
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Whether you're just starting or advancing your skills, TechBridge has a track designed for your journey.
+            Whether you're just starting or advancing your skills, Hub365 has a track designed for your journey.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {tracks.map((track) => {
@@ -142,7 +142,7 @@ const Promotions = () => {
       <section className="py-16 px-4 bg-accent/10">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Why Choose TechBridge?
+            Why Choose Hub365?
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Experience a comprehensive learning journey with industry-leading resources and support.
@@ -177,7 +177,7 @@ const Promotions = () => {
             Student Success Stories
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Join thousands of learners who have transformed their careers with TechBridge.
+            Join thousands of learners who have transformed their careers with Hub365.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
@@ -206,7 +206,7 @@ const Promotions = () => {
             Ready to Start Your Tech Journey?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join TechBridge today and take the first step toward a successful career in software engineering.
+            Join Hub365 today and take the first step toward a successful career in software engineering.
           </p>
           <Link to="/courses">
             <Button size="lg" variant="secondary" className="text-lg px-10 py-6 h-auto">
@@ -223,10 +223,10 @@ const Promotions = () => {
           <p className="text-lg text-muted-foreground">
             For inquiries, email{" "}
             <a
-              href="mailto:info@techbridge.africa"
+              href="mailto:info@hub365.com"
               className="text-primary font-semibold hover:underline"
             >
-              info@techbridge.africa
+              info@hub365.com
             </a>
           </p>
         </div>
