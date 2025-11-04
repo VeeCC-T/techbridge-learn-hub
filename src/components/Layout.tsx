@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/hub365-logo.png";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,10 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
-              <GraduationCap className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Hub365
-              </span>
+              <img src={logo} alt="Hub365 Logo" className="h-10 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -114,8 +112,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Brand */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <GraduationCap className="h-6 w-6 text-primary" />
-                <span className="font-bold text-lg">Hub365</span>
+                <img src={logo} alt="Hub365 Logo" className="h-8 w-auto" />
               </div>
               <p className="text-sm text-muted-foreground">
                 Building tech careers from zero to mastery through structured mentorship and recognized certifications.

@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { GraduationCap } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import logo from "@/assets/hub365-logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,9 +31,7 @@ const Login = () => {
       <Card className="w-full max-w-md border-0 shadow-lg">
         <CardHeader className="text-center pb-6">
           <div className="flex justify-center mb-4">
-            <div className="h-12 w-12 rounded-full bg-gradient-primary flex items-center justify-center">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
+            <img src={logo} alt="Hub365 Logo" className="h-16 w-auto" />
           </div>
           <CardTitle className="text-2xl">Welcome Back</CardTitle>
           <p className="text-sm text-muted-foreground">Sign in to access your courses</p>
